@@ -20,8 +20,38 @@ function ContactPage(){
                 value={formData.FirstName}
                 onChange={handleChange} 
                 />
-
             </Form.Group>
+
+            <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Label>Last Name</Form.Label>
+                <Form.Control 
+                type="text" 
+                name="LastName"
+                value={formData.LastName}
+                onChange={handleChange} 
+                />
+            </Form.Group>
+
+            <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Label>Email</Form.Label>
+                <Form.Control 
+                type="text" 
+                name="Email"
+                value={formData.Email}
+                onChange={handleChange} 
+                />
+            </Form.Group>
+
+            <Form.Group className="mb-3" controlId="formBasicEmail">
+                <Form.Label>Comments</Form.Label>
+                <Form.Control 
+                type="text" 
+                name="Comments"
+                value={formData.Comments}
+                onChange={handleChange} 
+                />
+            </Form.Group>
+
         </Form>
             
         </>
