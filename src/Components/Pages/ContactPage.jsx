@@ -1,6 +1,9 @@
 function ContactPage(){
     return(
-        <p>Contact</p>
+        <>
+            <h1>Contact Us</h1>
+            <p> Details of Contact</p>
+        </>
     ) 
 }
 

@@ -5,7 +5,7 @@ import ContactPage from './Components/Pages/ContactPage';
 import ToDosPage from './Components/Pages/ToDosPage';
 import Layout from './Components/Pages/Layout';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
