@@ -1,20 +1,34 @@
 import Form from 'react-bootstrap/Form';
 
 
-function ContactPage(){
+function ContactPage() {
 
-    function handleChange(){
+    const [formData, setFormData] = useState(
+        {   
+            firstName: "",
+            lastName: "",
+            email: "",
+            comments: ""
+        }
+    )
+
+    function handleChange (event) {
+        console.log (event.target)
+        console.log (event.target.name)
+        console.log (event.target.value)
+        const {name,value} = event.target
+        setFormData ({...formData,[name]:value})
     }
 
-    return(
+    return (
         <>
         <h1>Contact Us</h1>
         <p> Details of Contact</p>
         <Form>
-            
+
             <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>First Name</Form.Label>
-                <Form.Control 
+                    <Form.Control 
                 type="text" 
                 name="FirstName"
                 value={formData.FirstName}
