@@ -7,10 +7,10 @@ function ContactPage() {
 
     const [formData, setFormData] = useState(
         {   
-            firstName: "",
-            lastName: "",
-            email: "",
-            comments: ""
+            FirstName: "",
+            LastName: "",
+            Email: "",
+            Comments: ""
         }
     )
 
@@ -30,7 +30,7 @@ function ContactPage() {
 
             <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>First Name</Form.Label>
-                    <Form.Control 
+                <Form.Control 
                 type="text" 
                 name="FirstName"
                 value={formData.FirstName}
@@ -61,10 +61,11 @@ function ContactPage() {
             <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>Comments</Form.Label>
                 <Form.Control 
-                type="text" 
-                name="Comments"
-                value={formData.Comments}
-                onChange={handleChange} 
+                as="textarea"
+                rows={3}
+                name="comments"
+                value={formData.comments}
+                onChange={handleChange}
                 />
             </Form.Group>
             <Button variant="primary" type="submit">
