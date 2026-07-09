@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import HomePage from './Components/Pages/HomePage';
 import ContactPage from './Components/Pages/ContactPage';
@@ -21,6 +20,8 @@ function App() {
     </BrowserRouter>
     </div>
   );
+
+
 }
 
 export default App;

@@ -6,6 +6,12 @@ import Form from "react-bootstrap/Form";
 function ToDosPage() {
   const [todos, setTodos] = useState([]);
   const [input, setInput] = useState("");
+  const [filter, setFilter] = useState("all");
+  const filteredTodos = todos.filter(todo => {
+  if (filter === "completed") return todo.completed;
+  if (filter === "incomplete") return !todo.completed;
+  return true; // "all"
+});
 
   function addTodo(e) {
     e.preventDefault();
@@ -40,6 +46,30 @@ function ToDosPage() {
 
   return (
     <>
+      <div className="mb-3">
+        <Button
+          variant={filter === "all" ? "primary" : "outline-primary"}
+          onClick={() => setFilter("all")}
+          className="me-2"
+        >
+          All
+        </Button>
+
+        <Button
+          variant={filter === "incomplete" ? "primary" : "outline-primary"}
+          onClick={() => setFilter("incomplete")}
+          className="me-2"
+        >
+          Incomplete
+        </Button>
+
+        <Button
+          variant={filter === "completed" ? "primary" : "outline-primary"}
+          onClick={() => setFilter("completed")}
+        >
+          Completed
+        </Button>
+      </div>
       <h1>To-Do List</h1>
 
       <Form onSubmit={addTodo} className="mb-3">
@@ -55,7 +85,7 @@ function ToDosPage() {
       </Form>
 
       <ul>
-        {todos.map(todo => (
+        {filteredTodos.map(todo => (
           <li key={todo.id} style={{ marginBottom: "10px" }}>
             <span
               onClick={() => toggleComplete(todo.id)}

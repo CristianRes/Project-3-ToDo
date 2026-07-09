@@ -38,9 +38,18 @@
 }
 
 body{
-  background-color: #282c34;
   background-image: url(./Components/Images/background.png);
+  background-color: #1556d8;
+  color: #dfdfdf;
   min-height: 100vh;
   background-size: cover;
   background-position: center;
+}
+
+footer{
+position: fixed;
+bottom: 0;
+width: 100%;
+color: #dfdfdf;
+padding-bottom: 20px;
 }
