@@ -8,10 +8,11 @@ Technologies used:
   - JavaScript
 
 User stories:
+    
     As a user I want to be able to see my to-do’s neatly and organized.
-
+    
     As a user I want to be able to write my own list of tasks.
-
+    
     As a user I want to be able to contact the company if I need help or if any issues occur.
 
 Ideas for future improvement:
